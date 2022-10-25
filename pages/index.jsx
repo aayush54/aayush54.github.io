@@ -2,14 +2,15 @@ import React, { useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import ConstructionPopup from "../components/ConstructionPopup";
 
 export default function Home() {
-  const tempAlert = () => {
-    window.alert("The website is currently under construction!");
-  };
+  // const tempAlert = () => {
+  //   window.alert("The website is currently under construction!");
+  // };
 
-  // Page load message
-  useEffect(() => tempAlert(), []);
+  // // Page load message
+  // useEffect(() => tempAlert(), []);
 
   return (
     <div className={styles.container}>
@@ -19,6 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <ConstructionPopup />
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="Aayush">Aayush!</a>
