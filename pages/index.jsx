@@ -1,17 +1,31 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import ConstructionPopup from "../components/ConstructionPopup";
+import Link from "next/link";
+
+const helloArr = [
+  "Hello",
+  ",",
+  " ",
+  "I'm",
+  " ",
+  "Aayush",
+  ",",
+  " ",
+  "student",
+  ",",
+  " ",
+  "software engineer",
+  ",",
+  " ",
+  "etc",
+  ".",
+];
 
 export default function Home() {
-  // const tempAlert = () => {
-  //   window.alert("The website is currently under construction!");
-  // };
-
-  // // Page load message
-  // useEffect(() => tempAlert(), []);
-
+  console.log(helloArr);
   return (
     <div className={styles.container}>
       <Head>
@@ -22,43 +36,30 @@ export default function Home() {
 
       <ConstructionPopup />
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="Aayush">Aayush!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <div className={styles.hello}>
+          <div className={styles.left}>
+            {helloArr.map((char, ind) => {
+              return char !== " " ? (
+                <div key={ind} className={styles.letter}>
+                  {char}
+                </div>
+              ) : (
+                <div key={ind} className={styles.space}></div>
+              );
+            })}
+          </div>
+          <div className={styles.right}>
+            <h1>A</h1>
+          </div>
+        </div>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <Link href="/projects">
+            <a className={styles.card}>
+              <h2>Projects &rarr;</h2>
+              <p>Check out some projects I&apos;ve worked on</p>
+            </a>
+          </Link>
         </div>
       </main>
 

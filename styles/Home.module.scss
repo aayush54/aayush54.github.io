@@ -1,15 +1,55 @@
+@use "./base.scss";
+
 .container {
   padding: 0 2rem;
 }
 
+// .main div {
+//   border: red solid 1px;
+// }
+
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 0 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+$hello_font_size: 2rem;
+.hello {
+  display: flex;
+  justify-content: space-between;
+  color: base.$white;
+  cursor: default;
+  height: 50vh;
+}
+
+.left {
+  font-size: $hello_font_size;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  font-size: $hello_font_size * 5;
+  align-items: center;
+}
+
+.hello .space {
+  width: $hello_font_size * 0.25;
+}
+
+.letter {
+  transition: color 0.5s ease;
+  transition: font-size 0.5s ease;
+  &:hover {
+    color: base.$dark_red;
+    font-size: $hello_font_size * 1.2;
+  }
 }
 
 .footer {
