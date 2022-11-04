@@ -3,7 +3,7 @@ import { Modal, Button, Group } from "@mantine/core";
 import Image from "next/image";
 import styles from "../styles/ConstructionPopup.module.scss";
 
-const ConstructionPopup = () => {
+export const ConstructionPopup = () => {
   const [opened, setOpened] = useState(true);
 
   return (
@@ -12,6 +12,9 @@ const ConstructionPopup = () => {
         opened={opened}
         onClose={() => setOpened(false)}
         title="This site is under construction!"
+        transition="fade"
+        transitionDuration={600}
+        transitionTimingFunction="ease"
       >
         <div className={styles.background}></div>
         <p>
@@ -24,5 +27,3 @@ const ConstructionPopup = () => {
     </>
   );
 };
-
-export default ConstructionPopup;
