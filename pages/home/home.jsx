@@ -29,7 +29,8 @@ export default function VHome() {
           <div className={styles.introduction}>
             <VMainHeader />
             <div className={styles.profilePicture}>
-              <Image alt="Website logo for Aayush Singh" src={profilePicture} />
+              {/* <Image alt="Website logo for Aayush Singh" src={profilePicture} /> */}
+              <div className={styles.divPic}>A</div>
             </div>
           </div>
           <div className={styles.swipeDownIcon}>
