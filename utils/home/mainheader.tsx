@@ -12,7 +12,7 @@ export function VMainHeader() {
       </h1>
       <h2>
         {useTypedText(
-          "Welcome to website! I'm currently a student and software engineer. Check out some of my projects!",
+          "Welcome to my WIP website! I'm currently a student and software engineer. Check out some of my projects!",
           30,
           350
         )}

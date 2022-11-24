@@ -19,10 +19,9 @@ export default function VHome() {
           name="keywords"
           content="Aayush, Singh, Software, Developer, Frontend, Engineer"
         />
-        {/* TODO peek image <meta property="og:image" content="" key="ogimage" /> */}
+        <meta property="og:image" content="/portfolioPage.png?" key="ogimage" />
         <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon" />
       </Head>
-      <ConstructionPopup />
       <VMenuBar activeTab="Home" />
       <div className={styles.content}>
         <div className={styles.intro}>
@@ -44,14 +43,14 @@ export default function VHome() {
         </div>
         <div className={styles.workHistory}>
           <div className={styles.linkBox}>
-            <Fade>
+            <Fade triggerOnce>
               <h1 className={styles.linkBoxTitle}>Projects</h1>
               <h2 className={styles.linkBoxTextContent}>
                 Click here to find out about some of my past projects. Learn
                 about my previous internships, school work, and personal
                 projects.
               </h2>
-              <Link href={`/work/work`}>
+              <Link href={`/work`}>
                 <a className={styles.linkBoxButton}>Check out my projects</a>
               </Link>
             </Fade>
@@ -59,7 +58,7 @@ export default function VHome() {
           <div className={styles.workHistoryBackground} />
         </div>
         <div className={styles.technologiesAndTools}>
-          <Fade>
+          <Fade triggerOnce>
             <h1>Tools & Tech I've worked with</h1>
             <VToolsTech />
           </Fade>

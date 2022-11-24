@@ -1,6 +1,6 @@
 .workContainer {
   display: flex;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   flex-direction: column;
   max-width: 100vw;
 
@@ -20,7 +20,7 @@
       width: 70vw;
     }
 
-    .timelineGridCotainer {
+    .timelineGridContainer {
       max-width: 100vw;
     }
   }
@@ -31,7 +31,7 @@
     width: 85vw !important;
   }
 
-  .timelineGridCotainer {
+  .timelineGridContainer {
     overflow: hidden;
   }
 }

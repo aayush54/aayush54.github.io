@@ -9,35 +9,33 @@ export default function VWork() {
     <div className={styles.workContainer}>
       <Head>
         <title>Work history</title>
-        <meta name="description" content="Karolina Hudziec Portfolio Page" />
-        <meta name="author" content="Karolina Hudziec" />
+        <meta name="description" content="Aayush Singh Portfolio Page" />
+        <meta name="author" content="Aayush Singh" />
         <meta
           name="keywords"
-          content="Karolina, Hudziec, Portfolio, Frontend"
+          content="Aayush, Singh, Portfolio, Frontend, Backend, Fullstack, Machine Learning"
         />
         <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon" />
       </Head>
       <VMenuBar activeTab="Work" />
       <div className={styles.content}>
         <div className={styles.summary}>
-          <Fade>
+          <Fade triggerOnce>
             <h1>My Projects</h1>
             <h2>
-              I've started my journey with programming back in 2016 on Silesian
-              University with C++ (basics) and Python (basics + NumPy), which I
-              mostly used to analyze and simulate results of different
-              experiments. I've also got some experience in creating basic
-              drivers. Later, after I'd finished my studies, I decided to go in
-              the different direction. I lived in London for a year and was
-              learning web development on my own. In 2020 I'd managed to get an
-              internship and worked as a trainee Full-Stack developer (PHP, JS
-              React, MySQL, Rest API). Since then, I have been working as
-              Front-End React TypeScript Software Developer.
+              I'm currently a Computer Science student at the University of
+              Michigan. I plan to graduate in May 2024 with a Master's degree.
+              My main interests are in software engineering and machine
+              learning. I've interned at Tiktok as a Backend Software Engineer
+              and done research in machine learning algorithms at my
+              university's biomedical information lab. I've worked at my
+              university as both a web developer and currently as a teaching
+              assistant. Feel free to check out the details below.
             </h2>
           </Fade>
         </div>
         <Fade>
-          <div className={styles.timelineGridCotainer}>
+          <div className={styles.timelineGridContainer}>
             <VTimelineGrid />
           </div>
         </Fade>
